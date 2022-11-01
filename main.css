@@ -1,0 +1,56 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+
+.main-section {
+    background: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    height: 3rem;
+    text-align: center;
+    z-index: 10;
+    opacity: .7;
+    color: white;
+    padding-top: 10px;
+}
+
+#middle > div {
+    height: 100%;
+    flex: 1;
+    /* position: fixed; */
+    text-align: center;
+    margin: 25% auto;
+    padding: 4vw;
+    height: 100%;
+    color: white;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    height: 3rem;
+    text-align: center;
+    background-color: rgb(47, 0, 149);
+    z-index: 10;
+    opacity: .7;
+    color: grey;
+    padding-top: 1rem;
+}
+a {
+    text-decoration: none;
+    color: grey;
+}
