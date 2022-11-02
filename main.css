@@ -2,6 +2,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: rgb(28, 0, 110);
 } 
 
 
@@ -21,22 +22,41 @@ header{
     height: 3rem;
     text-align: center;
     z-index: 10;
-    opacity: .7;
+    opacity: 1;
     color: white;
     padding-top: 10px;
+    background-color: black;
 }
 
-#middle > div {
-    height: 100%;
-    flex: 1;
-    /* position: fixed; */
+/*Content*/
+.main-section {
+    display: flex;
+}
+
+#middle {
+    margin: auto auto;
+    justify-content: center;
+    display: table;
     text-align: center;
-    margin: 25% auto;
-    padding: 4vw;
-    height: 100%;
+}
+h3 {
     color: white;
 }
-footer {
+
+p {
+    color: white;
+}
+#menuButton {
+    display: table-cell;
+    vertical-align: bottom;    
+}
+
+/*When button is clicked*/
+.main-section.active{
+    transform: scale(.5);
+}
+
+footer{
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -44,13 +64,9 @@ footer {
     justify-content: center;
     height: 3rem;
     text-align: center;
-    background-color: rgb(47, 0, 149);
     z-index: 10;
-    opacity: .7;
-    color: grey;
-    padding-top: 1rem;
-}
-a {
-    text-decoration: none;
-    color: grey;
+    opacity: 1;
+    color: white;
+    padding-top: 10px;
+    background-color: black;
 }
