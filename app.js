@@ -1,19 +1,29 @@
 $(() => {
 const $mainSection = $('.main-section')
-$mainSection.css("animation", "main-animation 0.5s ease")
+const $menuButton = $('#menuButton')
+const $leftButton = $('<button>').attr('class','button').attr('id','back').text('Back')
+const $rightButton = $('<button>').attr('class','button').attr('id','next').text('Next')
+
 
 const menuShow = () => {
-    $mainSection.toggleClass('active');
+    $mainSection.toggleClass('active') //toggle so that when toggled, move into menu div.
+    $menuButton.toggleClass('active')
+    directionalButton()
+    $leftButton.toggleClass('active')
+    $rightButton.toggleClass('active')
+}
+const directionalButton = () => {
+    $leftButton.insertBefore($mainSection)
+    $rightButton.appendTo('.everything')
 }
 
 
 
+// const backToNormal = () => {
+//     // $mainSection.removeClass('active')
+//     // $menuButton.removeClass('active')
+//     // $buttons.removeClass('active')
+// }
+
     $('#menuButton').on('click', menuShow)
 })
-
-// const menuButton = document.querySelector("#menuButton")
-// const mainSection = document.querySelector(".main-section")
-
-// menuButton.addEventListener("click", () => {
-//     mainSection.classList.toggle("active")
-// })

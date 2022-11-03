@@ -2,19 +2,14 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(28, 0, 110);
 } 
-
-
-.main-section {
-    background: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
-    background-size: cover;
+body {
     display: flex;
-    height: 100%;
     flex-direction: column;
 }
+
 header{
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     left: 0;
@@ -29,8 +24,22 @@ header{
 }
 
 /*Content*/
-.main-section {
+.everything {
     display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgb(28, 0, 110);
+    z-index: 0;
+}
+
+.main-section {
+    background: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    transition: .5s;
+    flex-direction: column;
 }
 
 #middle {
@@ -41,23 +50,59 @@ header{
 }
 h3 {
     color: white;
+    opacity: inherit;
 }
 
 p {
     color: white;
+    opacity: 1;
 }
 #menuButton {
     display: table-cell;
     vertical-align: bottom;    
+    cursor: pointer;
+}
+
+.button{
+    display: none;
 }
 
 /*When button is clicked*/
 .main-section.active{
+    background-color: blue;
+    opacity: 1;
+    z-index: 3;
+    animation: main-animation 0.5s ease;
     transform: scale(.5);
 }
 
+
+@keyframes main-animation{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: scale(.5)
+    }
+}
+
+.button.active{
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+#next .active{
+    margin: auto;
+    right: 0;
+}
+#back .active{
+    left: 0;
+}
+
+
 footer{
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
     left: 0;
@@ -70,3 +115,6 @@ footer{
     padding-top: 10px;
     background-color: black;
 }
+
+
+
