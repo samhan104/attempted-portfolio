@@ -33,7 +33,7 @@ header{
 }
 
 .main-section {
-    background: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
+    background-image: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     z-index: 2;
@@ -117,4 +117,13 @@ footer{
 }
 
 
-
+/* About Me */
+#middle-aboutme {
+    margin: auto auto;
+    justify-content: center;
+    display: table;
+    text-align: center;
+}
+#middle-aboutme:hover {
+    background-color: rgb(28, 0, 110);
+}
