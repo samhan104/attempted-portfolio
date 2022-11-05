@@ -33,7 +33,7 @@ header{
 }
 
 .main-section {
-    background-image: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
+    background: url(file:///Users/generalassembly/dev/Project1/attempted-portfolio/6690817_2308.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     z-index: 2;
@@ -123,7 +123,39 @@ footer{
     justify-content: center;
     display: table;
     text-align: center;
+    overflow: auto;
 }
 #middle-aboutme:hover {
     background-color: rgb(28, 0, 110);
+}
+
+/*Resume*/
+.experienceButton {
+    color: white;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+}
+#job1Detail {
+    display: none;
+    background-color: gray;
+}
+#job2Detail {
+    display: none;
+    background-color: gray;
+}
+#job3Detail {
+    display: none;
+    background-color: gray;
+}
+#job4Detail {
+    display: none;
+    background-color: gray;
+}
+#job5Detail {
+    display: none;
+    background-color: gray;
+}
+h4 {
+    color: white;
 }
