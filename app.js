@@ -1,6 +1,7 @@
 $(() => {
 const $mainSection = $('.main-section')
 const $menuButton = $('#menuButton')
+const $menuButtonPortfolio = $('#menuButton-portfolio')
 const $leftButton = $('<button>').attr('class','button').attr('id','back').text('Back')
 const $rightButton = $('<button>').attr('class','button').attr('id','next').text('Next')
 const $job1Detail = $('#job1Detail')
@@ -8,6 +9,9 @@ const $job2Detail = $('#job2Detail')
 const $job3Detail = $('#job3Detail')
 const $job4Detail = $('#job4Detail')
 const $job5Detail = $('#job5Detail')
+const $audioDetail = $('#audioDetail')
+const $videoDetail = $('#videoDetail')
+const $codingDetail = $('#codingDetail')
 
 
 
@@ -67,6 +71,33 @@ const show5Details = () => {
         $job5Detail.css("display","none")
     }
 }
+
+const audioDetail = () => {
+    if($audioDetail.css("display")==="none"){
+        $audioDetail.css("display","block")
+        $audioDetail.css("color","white")
+    }else {
+        $audioDetail.css("display","none")
+    }
+}
+
+const videoDetail = () => {
+    if($videoDetail.css("display")==="none"){
+        $videoDetail.css("display","block")
+        $videoDetail.css("color","white")
+    }else {
+        $videoDetail.css("display","none")
+    }
+}
+
+const codingDetail = () => {
+    if($codingDetail.css("display")==="none"){
+        $codingDetail.css("display","block")
+        $codingDetail.css("color","white")
+    }else {
+        $codingDetail.css("display","none")
+    }
+}
 // const backToNormal = () => {
 //     // $mainSection.removeClass('active')
 //     // $menuButton.removeClass('active')
@@ -74,9 +105,13 @@ const show5Details = () => {
 // }
 
     $('#menuButton').on('click', menuShow)
+    $('#menuButton-portfolio').on('click', menuShow)
     $('#job1Click').on('click', show1Details)
     $('#job2Click').on('click', show2Details)
     $('#job3Click').on('click', show3Details)
     $('#job4Click').on('click', show4Details)
     $('#job5Click').on('click', show5Details)
+    $('.audioButton').on('click', audioDetail)
+    $('.videoButton').on('click', videoDetail)
+    $('.codingButton').on('click', codingDetail)
 })
