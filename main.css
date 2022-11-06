@@ -51,16 +51,24 @@ header{
 h3 {
     color: white;
     opacity: inherit;
+    border-color: black;
 }
 
 p {
     color: white;
     opacity: 1;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
 #menuButton {
     display: table-cell;
     vertical-align: bottom;    
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
 }
 
 .button{
@@ -100,7 +108,6 @@ p {
     left: 0;
 }
 
-
 footer{
     width: 100%;
     bottom: 0;
@@ -124,11 +131,34 @@ footer{
     text-align: center;
     overflow: auto;
 }
-#middle-aboutme:hover {
+.aboutme:hover {
     background-color: rgb(28, 0, 110);
+}
+.aboutme {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 /*Resume*/
+.resume {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.resume:hover{
+    background-color: rgb(28, 0, 110);
+}
 .experienceButton {
     color: white;
     background-color: rgb(0,0,0,0);
@@ -174,8 +204,12 @@ h4 {
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5rem;
 }
-
+#oldPortfolio {
+    text-decoration: none;
+    color: red;
+}
 .portfolio {
     display: flex;
     flex-direction: row;
@@ -183,6 +217,11 @@ h4 {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.portfolio:hover{
+    background-color: rgb(28, 0, 110);
 }
 .audioButton{
     color: white;
@@ -215,4 +254,72 @@ h4 {
 #codingDetail {
     display: none;
     background-color: gray;
+}
+
+/* Contact */
+#middle-contact {
+    left: auto;
+    right: auto;
+    top: 5rem;
+    justify-content: center;
+    display: table;
+    text-align: center;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.contacts:hover{
+    background-color: rgb(28, 0, 110);
+}
+#menuButton-contact {
+    display: table-cell;
+    vertical-align: bottom;    
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+.Linkedin{
+    cursor: pointer;
+    z-index: 3;
+
+}
+.Portfolio{
+    color: white;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+}
+.Github{
+    color: white;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+}
+
+/* carousel */
+.carousel-container {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+.carousel-images {
+	width: 80%;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px #f2cd99;
+}
+
+.carousel-images img {
+	width: 100%;
+	border-radius: 10px;
+	display: none;
 }
