@@ -33,7 +33,7 @@ header{
 }
 
 .main-section {
-    background: url(https://img.freepik.com/free-vector/full-moon-night-ocean-cartoon-illustration_33099-2308.jpg?w=2000&t=st=1667668321~exp=1667668921~hmac=d0ee658025f933fd164854d6102c3ac98077fb93e9c3754d17452abf48b8e4c6) no-repeat center center fixed;
+    background: url(background.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     z-index: 2;
