@@ -31,7 +31,6 @@ header{
     background-color: rgb(28, 0, 110);
     z-index: 0;
 }
-
 .main-section {
     background: url(background.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -198,6 +197,7 @@ footer{
 #job1Detail {
     display: none;
     background-color: gray;
+    overflow: auto;
 }
 #job2Detail {
     display: none;
