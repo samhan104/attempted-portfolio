@@ -1,8 +1,7 @@
 $(() => {
 const $mainSection = $('.main-section')
 const $menuButton = $('#menuButton')
-const $menuButtonPortfolio = $('#menuButton-portfolio')
-const $leftButton = $('<button>').attr('class','button').attr('id','back').text('Back')
+const $leftButton = $('<button>').attr('class','button').attr('id','previous').text('Back')
 const $rightButton = $('<button>').attr('class','button').attr('id','next').text('Next')
 const $job1Detail = $('#job1Detail')
 const $job2Detail = $('#job2Detail')
@@ -12,6 +11,7 @@ const $job5Detail = $('#job5Detail')
 const $audioDetail = $('#audioDetail')
 const $videoDetail = $('#videoDetail')
 const $codingDetail = $('#codingDetail')
+const $image = $('#image')
 
 
 
@@ -21,11 +21,61 @@ const menuShow = () => {
     directionalButton()
     $leftButton.toggleClass('active')
     $rightButton.toggleClass('active')
+    $image.toggleClass('active')
+    imagesAppear()
 }
 const directionalButton = () => {
     $rightButton.insertBefore($mainSection)
     $leftButton.appendTo('.everything')
 }
+
+
+
+const imagesAppear = () => {
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'flex')
+}
+let numOfImages = $('.carousel-images').children().length - 1
+let currentImgIndex = 0
+
+
+
+    //the next image button
+const goNext = () => {
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+
+    if(currentImgIndex < numOfImages) {
+        currentImgIndex ++
+    } else {
+        currentImgIndex = 0
+    }
+    
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'flex')
+    }
+   
+const goPrevious = () => {
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+
+    if(currentImgIndex > 0) {
+        currentImgIndex --
+    } else {
+         currentImgIndex = numOfImages
+    }
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'flex')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const show1Details = () => {
     if($job1Detail.css("display")==="none"){
@@ -105,7 +155,6 @@ const codingDetail = () => {
 // }
 
     $('#menuButton').on('click', menuShow)
-    $('#menuButton-portfolio').on('click', menuShow)
     $('#job1Click').on('click', show1Details)
     $('#job2Click').on('click', show2Details)
     $('#job3Click').on('click', show3Details)
@@ -114,4 +163,6 @@ const codingDetail = () => {
     $('.audioButton').on('click', audioDetail)
     $('.videoButton').on('click', videoDetail)
     $('.codingButton').on('click', codingDetail)
+    $rightButton.on('click', goNext)
+    $leftButton.on('click', goPrevious)
 })

@@ -82,6 +82,7 @@ a {
     z-index: 3;
     animation: main-animation 0.5s ease;
     transform: scale(.5);
+    display: none;
 }
 
 
@@ -92,6 +93,35 @@ a {
     to{
         transform: scale(.5)
     }
+}
+/* carousel */
+.carousel-container {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+    margin: auto;
+}
+.carousel-images {
+	width: 80%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.carousel-images a {
+	height: 100%;
+    z-index: 2;
+    transition: .5s;
+    flex-direction: column;
+	display: none;
+}
+.carousel-images a:first-of-type{
+    display: none;
+    margin: auto;
+    object-fit: cover;
+    animation: main-animation 0.5s ease;
+}
+img {
+    background-size: cover;
 }
 
 .button.active{
@@ -304,22 +334,3 @@ h4 {
     cursor: pointer;
 }
 
-/* carousel */
-.carousel-container {
-	width: 70%;
-	display: flex;
-	justify-content: space-around;
-}
-.carousel-images {
-	width: 80%;
-	padding: 10px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	box-shadow: 2px 2px #f2cd99;
-}
-
-.carousel-images img {
-	width: 100%;
-	border-radius: 10px;
-	display: none;
-}
